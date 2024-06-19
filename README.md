@@ -1,54 +1,88 @@
-# Astro Starter Kit: Basics
+# Muitú 24 Horas
 
-```sh
-npm create astro@latest -- --template basics
-```
+Bienvenido al proyecto **Muitú 24 Horas**, un sitio web para un kiosko/almacén 24 horas. Este proyecto está construido con Astro y despliega automáticamente en GitHub Pages.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Tabla de Contenidos
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Descripción](#descripción)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Despliegue](#despliegue)
+- [Contribuciones](#contribuciones)
+- [Licencia](#licencia)
+- [Contacto](#contacto)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Descripción
 
-## 🚀 Project Structure
+**Muitú 24 Horas** es una plataforma en línea diseñada para mostrar las promociones y productos disponibles en un kiosko/almacén abierto las 24 horas del día. La página incluye secciones de promociones, contacto, ubicación y enlaces a redes sociales.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Instalación
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Sigue estos pasos para configurar el proyecto localmente:
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1. Clona este repositorio:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+    ```bash
+    git clone https://github.com/your-username/muitu24hs.git
+    cd muitu24hs
+    ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. Instala las dependencias necesarias:
 
-## 🧞 Commands
+    ```bash
+    npm install
+    ```
 
-All commands are run from the root of the project, from a terminal:
+## Uso
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Para desarrollar y ejecutar el proyecto localmente:
 
-## 👀 Want to learn more?
+1. Inicia el servidor de desarrollo:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+    ```bash
+    npm run dev
+    ```
+
+2. Abre tu navegador y navega a `http://localhost:3000` para ver la página en acción.
+
+## Despliegue
+
+Este proyecto utiliza GitHub Actions para desplegar automáticamente en GitHub Pages. Para desplegar el sitio manualmente, sigue estos pasos:
+
+1. Construye el proyecto:
+
+    ```bash
+    npm run build
+    ```
+
+2. Despliega a GitHub Pages:
+
+    ```bash
+    npm run deploy
+    ```
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Para contribuir, sigue estos pasos:
+
+1. Haz un fork del proyecto.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz un commit (`git commit -m 'Agrega nueva funcionalidad'`).
+4. Empuja a la rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+## Contacto
+
+Para cualquier consulta o comentario, puedes contactar al desarrollador:
+
+- **Nombre:** Juan Nunez
+- **Email:** <juan.nunez.dev@gmail.com>
+- **GitHub:** [juaandress](https://github.com/juaandress)
+
+---
+
+¡Gracias por visitar **Muitú 24 Horas**!
