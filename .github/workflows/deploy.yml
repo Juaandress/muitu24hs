@@ -1,43 +1,22 @@
 name: Deploy to GitHub Pages
 
-# Evento que desencadena el flujo de trabajo
 on:
   push:
     branches:
-      - master  # Despliega cuando hay un push a la rama main
+      - master 
 
-# Definición de los trabajos (jobs) en el flujo de trabajo
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest  # El entorno de ejecución
-
-    permissions:
-      pages: write  # Permisos necesarios para escribir en GitHub Pages
-      id-token: write  # Permisos necesarios para el token de ID
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2  # Acción para clonar el repositorio
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2  # Acción para configurar Node.js
+      - uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'  # Versión de Node.js
-
-      - name: Install dependencies
-        run: npm install  # Instala las dependencias del proyecto
-
-      - name: Build the project
-        run: npm run build  # Construye el proyecto
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1  # Sube los archivos construidos como artefacto
-        with:
-          name: build
-          path: ./dist  # Ruta de los archivos construidos
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1  # Despliega los artefactos a GitHub Pages
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Usa el token de GitHub para autenticación
-          publish_dir: ./dist  # Directorio de publicación
+          node-version: '18'
+        
+      - run: npm install
+      - run: npm run build
+      - run: npm run deploy
