@@ -43,7 +43,7 @@ Para desarrollar y ejecutar el proyecto localmente:
     npm run dev
     ```
 
-2. Abre tu navegador y navega a `http://localhost:3000` para ver la página en acción.
+2. Abre tu navegador y navega a `http://localhost:4321` para ver la página en acción.
 
 ## Despliegue
 
