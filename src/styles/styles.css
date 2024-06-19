@@ -1,0 +1,40 @@
+/* src/styles/styles.css */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('/images/background-muitu.png');
+    /* Asegúrate de usar la ruta correcta */
+    background-size: auto;
+    /* Deja la imagen en su tamaño original */
+    background-position: center;
+    background-repeat: repeat;
+    /* Repite la imagen para cubrir todo el fondo */
+    color: white;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Capa semi-transparente para oscurecer el fondo */
+    z-index: -1;
+}
+
+.component-background {
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Fondo más oscuro para los componentes */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

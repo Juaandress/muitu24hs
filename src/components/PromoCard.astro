@@ -1,0 +1,43 @@
+---
+// src/components/PromoCard.astro
+const { title, description, image } = Astro.props;
+---
+
+<div class="promo-card">
+  <img src={image} alt={title} />
+  <div class="promo-content">
+    <h2>{title}</h2>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+  .promo-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 1rem;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+  }
+
+  .promo-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .promo-content {
+    padding: 1rem;
+  }
+
+  .promo-content h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .promo-content p {
+    margin: 0;
+  }
+</style>

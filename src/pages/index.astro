@@ -1,0 +1,222 @@
+---
+// src/pages/index.astro
+import Layout from "../layouts/Layout.astro";
+import PromoCard from "../components/PromoCard.astro";
+import "../styles/styles.css";
+
+const promos = [
+	{
+		title: "Dulces",
+		description: "Caramelos | Chocolates",
+		image: "/images/promo1.png",
+	},
+	{
+		title: "Verduleria",
+		description: "Papa | Cebolla | Remolacha",
+		image: "/images/promo2.png",
+	},
+	{
+		title: "Bebidas",
+		description: "Cocacola | Pepsi | Seven Up",
+		image: "/images/promo3.png",
+	},
+];
+---
+
+<Layout title="Kiosko/Almacén 24 Horas">
+	<main class="component-background">
+		<h1>Bienvenidos a <span class="text-gradient">Muitú</span> 24 Horas</h1>
+		<p class="intro-text">
+			Encuentra las mejores promociones disponibles las 24 horas del día.
+		</p>
+		<div class="promo-grid">
+			{promos.map((promo) => <PromoCard {...promo} />)}
+		</div>
+	</main>
+
+	<section class="contact">
+		<h2>Contacto</h2>
+		<p>Para más información, contáctanos a través de:</p>
+		<ul>
+			<li>Teléfono: 123-456-7890</li>
+			<li>Email: info@muitu24horas.com</li>
+			<li>Dirección: Calle Falsa 123, Ciudad</li>
+		</ul>
+		<form>
+			<label for="name">Nombre:</label>
+			<input type="text" id="name" name="name" required />
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required />
+			<label for="message">Mensaje:</label>
+			<textarea id="message" name="message" required></textarea>
+			<button type="submit">Enviar</button>
+		</form>
+	</section>
+
+	<section class="location">
+		<h2>Encuéntranos</h2>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.084167320314!2d-122.42067948501783!3d37.77492927975921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085814dd9c1dfab%3A0x9897152e7320b19b!2sFerry%20Building!5e0!3m2!1sen!2sus!4v1616070629208!5m2!1sen!2sus"
+			width="600"
+			height="450"
+			style="border:0;"
+			allowfullscreen=""
+			loading="lazy"></iframe>
+	</section>
+
+	<footer>
+		<p>&copy; 2024 Muitú 24 Horas. Todos los derechos reservados.</p>
+		<div class="social-media">
+			<a href="https://facebook.com" target="_blank">Facebook</a>
+			<a href="https://twitter.com" target="_blank">Twitter</a>
+			<a href="https://instagram.com" target="_blank">Instagram</a>
+		</div>
+	</footer>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: 1200px;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		min-height: 100vh; /* Asegura que el contenido principal cubra toda la altura de la ventana */
+	}
+
+	.intro-text {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.promo-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.contact {
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.85
+		); /* Fondo más oscuro para la sección de contacto */
+		padding: 2rem;
+		border-radius: 8px;
+		margin-top: 2rem;
+	}
+
+	.contact h2 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.contact p {
+		text-align: center;
+	}
+
+	.contact ul {
+		list-style: none;
+		padding: 0;
+		text-align: center;
+	}
+
+	.contact li {
+		margin: 0.5rem 0;
+	}
+
+	.contact form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact form label {
+		margin: 0.5rem 0;
+	}
+
+	.contact form input,
+	.contact form textarea {
+		width: 100%;
+		max-width: 400px;
+		padding: 0.5rem;
+		margin: 0.5rem 0;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+	}
+
+	.contact form button {
+		background-color: #ff6600;
+		color: white;
+		padding: 0.5rem 1rem;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		margin-top: 1rem;
+	}
+
+	.location {
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.85
+		); /* Fondo más oscuro para la sección de ubicación */
+		padding: 2rem;
+		border-radius: 8px;
+		margin-top: 2rem;
+	}
+
+	.location h2 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.location iframe {
+		width: 100%;
+		height: 300px;
+		border: none;
+		border-radius: 8px;
+	}
+
+	footer {
+		text-align: center;
+		padding: 1rem;
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.85
+		); /* Fondo más oscuro para el footer */
+		color: white;
+		font-size: 0.9rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea superior */
+	}
+
+	footer p {
+		margin: 0;
+	}
+
+	.social-media {
+		margin-top: 1rem;
+	}
+
+	.social-media a {
+		margin: 0 0.5rem;
+		color: white;
+		text-decoration: none;
+	}
+
+	.social-media a:hover {
+		text-decoration: underline;
+	}
+</style>
